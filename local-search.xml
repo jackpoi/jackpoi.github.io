@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>byte[] 转换 int</title>
+    <link href="/2022/04/28/%E8%BD%AC%E6%8D%A2/"/>
+    <url>/2022/04/28/%E8%BD%AC%E6%8D%A2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="byte-转换-int"><a href="#byte-转换-int" class="headerlink" title="byte[] 转换 int"></a>byte[] 转换 int</h3><p>1byte 是 8bit，1int 是 4byte、32bit，在 byte[] 中取出 int 类型，需要取第一个 byte 以及向后顺延 3byte，一共 32bit，再转化成 int 类型。</p><p>Java 对 char，byte 或者 short 进行移位处理时，会先自动转换成 int 类型，也就是会在 char，byte 或者 short 的前面补上  0，直到达到 32bit。</p><p>如 <code>byte[]&#123;1,2,3,4&#125;</code> 的二进制就是 <code>[00000001,00000010,00000011,00000100]</code>，其中索引 0 处的 int 整数就是 <code>00000001 00000010 00000011 00000100</code>，也就是 <code>16909060</code>。</p><p>要将 byte[] 转换成 int，需要对其进行移位，byte[0] 左移 24 位，使其成为 32bit int 的第 0<del>7bit，同理，byte[1]、byte[2]、byte[3] 分别成为 int 的第 8</del>15bit、 16<del>23bit、 24</del>31bit。</p><p><code>&amp; 0xFF</code>是为了得到低 8 位。</p><figure class="highlight java"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getInt</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span> &#123;<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">first</span> <span class="hljs-operator">=</span> source[index];<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">second</span> <span class="hljs-operator">=</span> source[index + <span class="hljs-number">1</span>];<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">third</span> <span class="hljs-operator">=</span> source[index + <span class="hljs-number">2</span>];<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">forth</span> <span class="hljs-operator">=</span> source[index + <span class="hljs-number">3</span>];<br>    <span class="hljs-keyword">return</span> (first &amp; <span class="hljs-number">0xFF</span>) &lt;&lt; <span class="hljs-number">24</span><br>        | (second &amp; <span class="hljs-number">0xFF</span>) &lt;&lt; <span class="hljs-number">16</span><br>        | (third &amp; <span class="hljs-number">0xFF</span>) &lt;&lt; <span class="hljs-number">8</span><br>        | (forth &amp; <span class="hljs-number">0xFF</span>);<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Docker 解锁网易云音乐</title>
     <link href="/2022/04/26/Docker%20%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
     <url>/2022/04/26/Docker%20%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</url>
