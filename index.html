@@ -54,7 +54,7 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 6.1.0"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 
 <body>
@@ -194,13 +194,60 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/04/28/%E8%BD%AC%E6%8D%A2/" target="_self">
+        <a href="/2022/05/17/SSH%20%E8%87%AA%E5%8A%A8%E6%96%AD%E5%BC%80%E8%BF%9E%E6%8E%A5/" target="_self">
+          SSH 自动断开连接
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/17/SSH%20%E8%87%AA%E5%8A%A8%E6%96%AD%E5%BC%80%E8%BF%9E%E6%8E%A5/" target="_self">
+          
+          SSH 自动断开连接ssh 连接服务器，一段时间不进行操作后会自动断开连接，可以修改 ssh 配置延长心跳间隔时间。 更改服务端配置以  Ubuntu 20.04 为例。 修改服务端配置，以本机当作 ssh 连接的对象。  修改 ssh 服务端配置文件 1vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config  添加以下内容： 1234# 服务器端向客户端发送心跳的时间间隔ClientAliveInte
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-17 10:48" pubdate>
+              2022-05-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/linux/">linux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/linux/">linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/28/byte%5B%5D%20%E8%BD%AC%E6%8D%A2%20int/" target="_self">
           byte[] 转换 int
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2022/04/28/%E8%BD%AC%E6%8D%A2/" target="_self">
+        <a href="/2022/04/28/byte%5B%5D%20%E8%BD%AC%E6%8D%A2%20int/" target="_self">
           
           byte[] 转换 int1byte 是 8bit，1int 是 4byte、32bit，在 byte[] 中取出 int 类型，需要取第一个 byte 以及向后顺延 3byte，一共 32bit，再转化成 int 类型。 Java 对 char，byte 或者 short 进行移位处理时，会先自动转换成 int 类型，也就是会在 char，byte 或者 short 的前面补上  0，直到达到
         </a>
