@@ -16,22 +16,22 @@
   <meta name="author" content="Beastars">
   <meta name="keywords" content="Java,Golang,Game">
   
-    <meta name="description" content="docker 常用命令1. docker 配置镜像源配置 ustc 镜像源 在 &#x2F;etc&#x2F;docker&#x2F;daemon.json 中添加 123&amp;#123;  &quot;registry-mirrors&quot;: [&quot;https:&#x2F;&#x2F;docker.mirrors.ustc.edu.cn&#x2F;&quot;]&amp;#125;  之后 systemctl restart docker 重启 doc">
+    <meta name="description" content="Docker 部署 yunzai-bot官方的部署文档：部署说明 | 文档中心 (yunzai.org) 本机部署本地手动部署 | 文档中心 (yunzai.org)  环境 Redis，NodeJS(&gt;&#x3D;16)    克隆项目  1git clone https:&#x2F;&#x2F;gitee.com&#x2F;Le-niao&#x2F;Yunzai-Bot.git  安装 pnmp  1npm install p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker 常用命令">
-<meta property="og:url" content="https://beastars1.github.io/2022/04/21/Docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="yunzai-bot 部署">
+<meta property="og:url" content="https://beastars1.github.io/2023/02/13/yunzai-bot%20%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="云·烟">
-<meta property="og:description" content="docker 常用命令1. docker 配置镜像源配置 ustc 镜像源 在 &#x2F;etc&#x2F;docker&#x2F;daemon.json 中添加 123&amp;#123;  &quot;registry-mirrors&quot;: [&quot;https:&#x2F;&#x2F;docker.mirrors.ustc.edu.cn&#x2F;&quot;]&amp;#125;  之后 systemctl restart docker 重启 doc">
+<meta property="og:description" content="Docker 部署 yunzai-bot官方的部署文档：部署说明 | 文档中心 (yunzai.org) 本机部署本地手动部署 | 文档中心 (yunzai.org)  环境 Redis，NodeJS(&gt;&#x3D;16)    克隆项目  1git clone https:&#x2F;&#x2F;gitee.com&#x2F;Le-niao&#x2F;Yunzai-Bot.git  安装 pnmp  1npm install p">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-21T12:22:11.000Z">
+<meta property="article:published_time" content="2023-02-13T21:08:37.000Z">
 <meta property="article:modified_time" content="2023-02-13T14:16:26.003Z">
 <meta property="article:author" content="Beastars">
-<meta property="article:tag" content="docker">
+<meta property="article:tag" content="docker bot">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Docker 常用命令 - 云·烟</title>
+  <title>yunzai-bot 部署 - 云·烟</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Docker 常用命令"></span>
+            <span id="subtitle" data-typed-text="yunzai-bot 部署"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-21 12:22" pubdate>
-          2022年4月21日 中午
+        <time datetime="2023-02-13 21:08" pubdate>
+          2023年2月13日 晚上
         </time>
       </span>
     
@@ -253,52 +253,78 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Docker 常用命令</h1>
+            <h1 style="display: none">yunzai-bot 部署</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="docker-常用命令"><a href="#docker-常用命令" class="headerlink" title="docker 常用命令"></a>docker 常用命令</h2><h3 id="1-docker-配置镜像源"><a href="#1-docker-配置镜像源" class="headerlink" title="1. docker 配置镜像源"></a>1. docker 配置镜像源</h3><p>配置 ustc 镜像源</p>
-<p>在 <code>/etc/docker/daemon.json</code> 中添加</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;registry-mirrors&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;https://docker.mirrors.ustc.edu.cn/&quot;</span><span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
-
-<p>之后 <code>systemctl restart docker</code> 重启 docker</p>
-<h3 id="2-docker-搜索镜像"><a href="#2-docker-搜索镜像" class="headerlink" title="2. docker 搜索镜像"></a>2. docker 搜索镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker search redis<br></code></pre></td></tr></table></figure>
-
-<h3 id="3-docker-拉取镜像"><a href="#3-docker-拉取镜像" class="headerlink" title="3. docker 拉取镜像"></a>3. docker 拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull redis <span class="hljs-comment"># 默认拉取最新版本</span><br>docker pull redis:latest<br>docker pull redis:version<br></code></pre></td></tr></table></figure>
-
-<h3 id="4-docker-显示已经安装的镜像"><a href="#4-docker-显示已经安装的镜像" class="headerlink" title="4. docker 显示已经安装的镜像"></a>4. docker 显示已经安装的镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker images<br></code></pre></td></tr></table></figure>
-
-<h3 id="5-docker-删除已经安装的镜像"><a href="#5-docker-删除已经安装的镜像" class="headerlink" title="5. docker 删除已经安装的镜像"></a>5. docker 删除已经安装的镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker rmi imageId<br></code></pre></td></tr></table></figure>
-
-<h3 id="6-docker-运行容器"><a href="#6-docker-运行容器" class="headerlink" title="6. docker 运行容器"></a>6. docker 运行容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]<br></code></pre></td></tr></table></figure>
-
-<p>docker run的额外参数</p>
+                <h1 id="Docker-部署-yunzai-bot"><a href="#Docker-部署-yunzai-bot" class="headerlink" title="Docker 部署 yunzai-bot"></a>Docker 部署 yunzai-bot</h1><p>官方的部署文档：<a target="_blank" rel="noopener" href="https://docs.yunzai.org/deploy/">部署说明 | 文档中心 (yunzai.org)</a></p>
+<h2 id="本机部署"><a href="#本机部署" class="headerlink" title="本机部署"></a>本机部署</h2><p><a target="_blank" rel="noopener" href="https://docs.yunzai.org/deploy/windows/local.html">本地手动部署 | 文档中心 (yunzai.org)</a></p>
 <ul>
-<li><p>–name 给当前运行的容器起一个名字</p>
-<p><code>docker run --name mytomcat -d tomcat</code></p>
-</li>
-<li><p>-d 后台运行容器</p>
-</li>
-<li><p>-p 用于端口映射</p>
-<blockquote>
-<p>-p src:dest</p>
-<p>src 为物理主机端口，dest 为容器的端口</p>
-<p>-p 8888:9999 就是将物理主机的 8888 端口映射到容器的 9999 端口，这样就可以通过访问物理主机的 8888 端口来访问容器的 9999 端口了</p>
-</blockquote>
+<li><p>环境</p>
+<p>Redis，NodeJS(&gt;&#x3D;16)</p>
 </li>
 </ul>
-<h3 id="7-docker-查看正在运行的容器"><a href="#7-docker-查看正在运行的容器" class="headerlink" title="7. docker 查看正在运行的容器"></a>7. docker 查看正在运行的容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps [ARG...]<br></code></pre></td></tr></table></figure>
+<ol>
+<li><p>克隆项目</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://gitee.com/Le-niao/Yunzai-Bot.git<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>安装 pnmp</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install pnpm -g<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>进入 <code>Yunzai-Bot</code> 文件夹，安装依赖</p>
+ <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> pnpm -g<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>运行</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">node app<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Docker-部署"><a href="#Docker-部署" class="headerlink" title="Docker 部署"></a>Docker 部署</h2><blockquote>
+<p>docker-compose 的部署官网就有，这里说个不使用 docker-compose 的</p>
+</blockquote>
+<ol>
+<li><p>准备 <code>Redis</code> 环境</p>
+<ul>
+<li><p>拉取 <code>Redis</code> 镜像</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull redis<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>准备 <code>Redis</code> 配置文件</p>
+<p>  在官网可以获取，<a target="_blank" rel="noopener" href="https://download.redis.io/redis-stable/redis.conf">https://download.redis.io/redis-stable/redis.conf</a></p>
+<p>  将配置文件放入自定义路径，比如 <code>/root/redis/redis.conf</code></p>
+</li>
+<li><p>启动 <code>Redis</code> 容器</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run --name redis -p 6379:6379 -v /root/redis/data:/data -v /root/redis/redis.conf:/etc/redis/redis.conf --restart=always --network yunzai-network -d redis redis-server /etc/redis/redis.conf<br></code></pre></td></tr></table></figure>
 
-<h3 id="8-docker-停止正在运行的容器"><a href="#8-docker-停止正在运行的容器" class="headerlink" title="8. docker 停止正在运行的容器"></a>8. docker 停止正在运行的容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker stop containerId <br></code></pre></td></tr></table></figure>
+<p>  <code>--network yunzai-network</code> 指定该容器所在的网络，之后将机器人也放入该网络，就可以访问 <code>Redis</code> 了。</p>
+</li>
+</ul>
+</li>
+<li><p>拉取 <code>yunzai-bot</code> 镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull sirly/yunzai-bot:v3<br></code></pre></td></tr></table></figure>
 
-<h3 id="9-docker-启动容器"><a href="#9-docker-启动容器" class="headerlink" title="9. docker 启动容器"></a>9. docker 启动容器</h3><p>run 是从镜像创建一个新容器启动，start 是启动已经存在的容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker start containerId<br></code></pre></td></tr></table></figure>
-
-<h3 id="10-docker-删除容器"><a href="#10-docker-删除容器" class="headerlink" title="10. docker 删除容器"></a>10. docker 删除容器</h3><p>只删除容器，不删除镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">rm</span> containerId<br></code></pre></td></tr></table></figure>
-
-<h3 id="11-docker-查看容器启动的日志"><a href="#11-docker-查看容器启动的日志" class="headerlink" title="11. docker 查看容器启动的日志"></a>11. docker 查看容器启动的日志</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker logs containerId<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>v2 v3 是机器人的版本，v3plus 是扩展版，附带 ffmpeg 环境和 Python 环境</p>
+</blockquote>
+</li>
+<li><p>启动容器</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run --name yunzai-bot -p 50831:50831 -v /root/yunzai-bot/config:/app/Yunzai-Bot/config/config/ -v /root/yunzai-bot/genshin_config:/app/Yunzai-Bot/plugins/genshin/config -v /root/yunzai-bot/logs:/app/Yunzai-Bot/logs -v /root/yunzai-bot/data:/app/Yunzai-Bot/data -e CUID=1000 -e CGID=1000 -d --restart=always --network yunzai-network sirly/yunzai-bot:v3<br></code></pre></td></tr></table></figure>
+<p> 要将该容器和 <code>Redis</code> 容器放入同一个网路下，通过 <code>-network</code> 指定 <code>yunzai-network</code> </p>
+<p> 映射的目录的功能如下：</p>
+<p> <code>/app/Yunzai-Bot/config/config/</code> ：Bot 基础配置文件<br> <code>/app/Yunzai-Bot/plugins/genshin/config</code> ：公共Cookie，云崽功能配置文件<br> <code>/app/Yunzai-Bot/logs</code> ：日志文件<br> <code>/app/Yunzai-Bot/data</code> ：数据文件</p>
+</li>
+<li><p>启动机器人</p>
+<p> 进入容器内部，在内部运行项目</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it yunzai-bot sh<br><span class="hljs-comment"># 在内部运行项目</span><br>node app<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><p>todo</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol>
+<li><p>机器人无法登录</p>
+<p>如果是在服务器上进行部署的，因为服务器地址和所在地址不同，会导致登录失败，可以现在本地部署，之后将本地 <code>~/yunzai-bot/data/qq号/device-qq号.json</code> 的文件复制到服务器上，再次重新登录即可。</p>
+</li>
+<li><p>获取米游社 cookie</p>
+<p>浏览器登录米游社之后，打开F12，刷新页面，找到 <code>https://www.miyoushe.com/ys/</code> 这个请求，将请求头中的 <code>cookie</code> 复制下来即可</p>
+<p><code>cookie</code> 中应该包含有 <code>ltoken_v2</code>、<code>ltuid_v2</code>、<code>cookie_token_v2</code>、<code>account_mid_v2</code> 四个值</p>
+</li>
+</ol>
 
                 
               </div>
@@ -332,7 +358,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/docker/">#docker</a>
+        <a href="/tags/docker-bot/">#docker bot</a>
       
     </div>
   
@@ -344,8 +370,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Docker 常用命令</div>
-      <div>https://beastars1.github.io/2022/04/21/Docker 常用命令/</div>
+      <div>yunzai-bot 部署</div>
+      <div>https://beastars1.github.io/2023/02/13/yunzai-bot 部署/</div>
     </div>
     <div class="license-meta">
       
@@ -357,7 +383,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月21日</div>
+          <div>2023年2月13日</div>
         </div>
       
       
@@ -389,15 +415,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/26/Docker%20%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" title="Docker 解锁网易云音乐">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Docker 解锁网易云音乐</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/10/27/PowerShell%207%20%E5%AE%89%E8%A3%85%20oh-my-posh/" title="PowerShell 7 安装 oh-my-posh">
+                        <span class="hidden-mobile">PowerShell 7 安装 oh-my-posh</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
