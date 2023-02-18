@@ -24,7 +24,7 @@
 <meta property="og:description" content="Docker 部署 yunzai-bot官方的部署文档：部署说明 | 文档中心 (yunzai.org) 本机部署本地手动部署 | 文档中心 (yunzai.org)  环境 Redis，NodeJS(&gt;&#x3D;16)    克隆项目  1git clone https:&#x2F;&#x2F;gitee.com&#x2F;Le-niao&#x2F;Yunzai-Bot.git  安装 pnmp  1npm install p">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-13T21:08:37.000Z">
-<meta property="article:modified_time" content="2023-02-13T14:25:15.359Z">
+<meta property="article:modified_time" content="2023-02-18T16:57:11.165Z">
 <meta property="article:author" content="Beastars">
 <meta property="article:tag" content="docker">
 <meta property="article:tag" content="bot">
@@ -320,6 +320,9 @@
 <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol>
 <li><p>机器人无法登录</p>
 <p>如果是在服务器上进行部署的，因为服务器地址和所在地址不同，会导致登录失败，可以现在本地部署，之后将本地 <code>~/yunzai-bot/data/qq号/device-qq号.json</code> 的文件复制到服务器上，再次重新登录即可。</p>
+</li>
+<li><p>qq 版本过低</p>
+<p>修改 <code>~/yunzai-bot/data/qq号/device-qq号.json</code> 中的 <code>imei</code>，可以随机更改，也可以用自己的手机拨号 <code>*#06#</code> 获取自己的 <code>imei</code> 进行替换，保存之后使用 <code>node app</code> 重新启动。</p>
 </li>
 <li><p>获取米游社 cookie</p>
 <p>浏览器登录米游社之后，打开F12，刷新页面，找到 <code>https://www.miyoushe.com/ys/</code> 这个请求，将请求头中的 <code>cookie</code> 复制下来即可</p>
