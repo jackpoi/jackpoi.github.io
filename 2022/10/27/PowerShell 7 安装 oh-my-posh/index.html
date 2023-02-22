@@ -24,7 +24,7 @@
 <meta property="og:description" content="PowerShell 7 安装 oh-my-posh下载 PowerShell 7PowerShell&#x2F;PowerShell: PowerShell for every system! (github.com) 安装 oh-my-posh 官方安装文档：Windows | Oh My Posh  下载安装 oh-my-posh 1winget install JanDeDobbeleer">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-27T21:19:16.000Z">
-<meta property="article:modified_time" content="2023-02-22T12:50:13.428Z">
+<meta property="article:modified_time" content="2023-02-22T12:57:29.515Z">
 <meta property="article:author" content="Beastars">
 <meta property="article:tag" content="PowerShell">
 <meta property="article:tag" content="oh-my-posh">
@@ -360,7 +360,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">Import-Module posh-git<br></code></pre></td></tr></table></figure>
 
 <p>重新加载配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">. <span class="hljs-variable">$PROFILE</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">. <span class="hljs-variable">$PROFILE</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>解决中文乱码</p>
+<p>在系统环境变量中新建变量：<code>LESSCHARSET</code> 为 <code>utf-8</code></p>
+</li>
 </ol>
 <h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 导入oh-my-posh 并指向主题</span><br>oh-my-posh init pwsh --config <span class="hljs-string">&quot;<span class="hljs-variable">$env</span>:POSH_THEMES_PATH\dracula.omp.json&quot;</span> | Invoke-Expression<br><span class="hljs-comment"># 导入posh-git</span><br>Import-Module posh-git<br></code></pre></td></tr></table></figure>
 
