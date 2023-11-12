@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Ubuntu 登录设置</title>
+    <link href="/2023/11/12/Ubuntu%20%E7%99%BB%E5%BD%95%E8%AE%BE%E7%BD%AE/"/>
+    <url>/2023/11/12/Ubuntu%20%E7%99%BB%E5%BD%95%E8%AE%BE%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Ubuntu-登录设置"><a href="#Ubuntu-登录设置" class="headerlink" title="Ubuntu 登录设置"></a>Ubuntu 登录设置</h1><h2 id="新建用户代替root用户"><a href="#新建用户代替root用户" class="headerlink" title="新建用户代替root用户"></a>新建用户代替root用户</h2><h3 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># useradd -m jackpoi -s /bin/bash</span><br>[root@Ubuntu:~]<span class="hljs-comment"># passwd jackpoi</span><br>New password:<br>Retype new password:<br>passwd: password updated successfully<br></code></pre></td></tr></table></figure><blockquote><p>-m: 自动建立用户的登入目录</p><p>-s: 指定用户登入后所使用的shell。默认值为&#x2F;bin&#x2F;bash</p></blockquote><p>现在可以用新用户登录系统验证是否可用。</p><h3 id="分配权限"><a href="#分配权限" class="headerlink" title="分配权限"></a>分配权限</h3><p>给创建的新用户分配sudo的权限。</p><blockquote><p>sudo允许一个已授权用户以超级用户或者其它用户的角色运行一个命令</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># adduser jackpoi sudo</span><br>Adding user jackpoi to group sudo ...<br>Adding user jackpoi to group sudo<br>Done.<br></code></pre></td></tr></table></figure><p>现在用新用户可以执行sudo命令，但是需要输入用户密码。</p><h3 id="设置sudo免密码"><a href="#设置sudo免密码" class="headerlink" title="设置sudo免密码"></a>设置sudo免密码</h3><p>root权限的用户执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># visudo</span><br></code></pre></td></tr></table></figure><p>或者</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># vi /etc/sudoers</span><br></code></pre></td></tr></table></figure><p>在文件的最下方添加以下内容，如果添加到前面可能会收到其他组用户的影响。</p><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nsis"><span class="hljs-comment"># 设置用户</span><br>jackpoi <span class="hljs-literal">ALL</span>=(<span class="hljs-literal">ALL</span>:<span class="hljs-literal">ALL</span>) NOPASSWD:<span class="hljs-literal">ALL</span><br><span class="hljs-comment"># 设置 %用户组</span><br>%jackpoi <span class="hljs-literal">ALL</span>=(<span class="hljs-literal">ALL</span>:<span class="hljs-literal">ALL</span>) NOPASSWD:<span class="hljs-literal">ALL</span><br></code></pre></td></tr></table></figure><h2 id="禁止root用户ssh登录"><a href="#禁止root用户ssh登录" class="headerlink" title="禁止root用户ssh登录"></a>禁止root用户ssh登录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># vim /etc/ssh/sshd_config</span><br></code></pre></td></tr></table></figure><p>将<code>PermitRootLogin yes</code>修改为<code>PermitRootLogin no</code>，保存之后重启ssh服务<code>service ssh restart</code>。</p><h2 id="修改ssh登录端口"><a href="#修改ssh登录端口" class="headerlink" title="修改ssh登录端口"></a>修改ssh登录端口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># vim /etc/ssh/sshd_config</span><br></code></pre></td></tr></table></figure><p>将<code>Port 22</code>修改为任意<code>1025~65535</code>直接的端口，保存之后重启ssh服务<code>service ssh restart</code>。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ubuntu</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ubuntu</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>yunzai-bot 部署</title>
     <link href="/2023/02/13/yunzai-bot%20%E9%83%A8%E7%BD%B2/"/>
     <url>/2023/02/13/yunzai-bot%20%E9%83%A8%E7%BD%B2/</url>
