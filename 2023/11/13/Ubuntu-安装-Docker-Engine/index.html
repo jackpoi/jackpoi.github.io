@@ -16,22 +16,23 @@
   <meta name="author" content="Beastars">
   <meta name="keywords" content="Java,Golang,Game">
   
-    <meta name="description" content="Ubuntu 登录设置新建用户代替root用户创建新用户12345[root@Ubuntu:~]# useradd -m jackpoi -s &#x2F;bin&#x2F;bash[root@Ubuntu:~]# passwd jackpoiNew password:Retype new password:passwd: password updated successfully   -m: 自动建立用户的登入目录">
+    <meta name="description" content="Ubuntu 安装 Docker Engine 以Ubuntu 20.04为例 Install Docker Engine on Ubuntu | Docker Docs  卸载旧版本要卸载的非官方软件包有docker.io，docker-compose，docker-compose-v2，docker-doc，podman-docker 1for pkg in docker.io docker-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 登录设置">
-<meta property="og:url" content="https://jackpoi.github.io/2023/11/12/Ubuntu%20%E7%99%BB%E5%BD%95%E8%AE%BE%E7%BD%AE/index.html">
+<meta property="og:title" content="Ubuntu 安装 Docker Engine">
+<meta property="og:url" content="https://jackpoi.github.io/2023/11/13/Ubuntu-%E5%AE%89%E8%A3%85-Docker-Engine/index.html">
 <meta property="og:site_name" content="云·烟">
-<meta property="og:description" content="Ubuntu 登录设置新建用户代替root用户创建新用户12345[root@Ubuntu:~]# useradd -m jackpoi -s &#x2F;bin&#x2F;bash[root@Ubuntu:~]# passwd jackpoiNew password:Retype new password:passwd: password updated successfully   -m: 自动建立用户的登入目录">
+<meta property="og:description" content="Ubuntu 安装 Docker Engine 以Ubuntu 20.04为例 Install Docker Engine on Ubuntu | Docker Docs  卸载旧版本要卸载的非官方软件包有docker.io，docker-compose，docker-compose-v2，docker-doc，podman-docker 1for pkg in docker.io docker-">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-12T18:08:14.000Z">
+<meta property="article:published_time" content="2023-11-13T20:21:25.000Z">
 <meta property="article:modified_time" content="2023-11-13T12:24:37.337Z">
 <meta property="article:author" content="Beastars">
+<meta property="article:tag" content="docker">
 <meta property="article:tag" content="ubuntu">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Ubuntu 登录设置 - 云·烟</title>
+  <title>Ubuntu 安装 Docker Engine - 云·烟</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -197,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Ubuntu 登录设置"></span>
+            <span id="subtitle" data-typed-text="Ubuntu 安装 Docker Engine"></span>
           
         </div>
 
@@ -208,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-12 18:08" pubdate>
-          2023年11月12日 晚上
+        <time datetime="2023-11-13 20:21" pubdate>
+          2023年11月13日 晚上
         </time>
       </span>
     
@@ -252,40 +253,45 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Ubuntu 登录设置</h1>
+            <h1 id="seo-header">Ubuntu 安装 Docker Engine</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="Ubuntu-登录设置"><a href="#Ubuntu-登录设置" class="headerlink" title="Ubuntu 登录设置"></a>Ubuntu 登录设置</h1><h2 id="新建用户代替root用户"><a href="#新建用户代替root用户" class="headerlink" title="新建用户代替root用户"></a>新建用户代替root用户</h2><h3 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># useradd -m jackpoi -s /bin/bash</span><br>[root@Ubuntu:~]<span class="hljs-comment"># passwd jackpoi</span><br>New password:<br>Retype new password:<br>passwd: password updated successfully<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>-m: 自动建立用户的登入目录</p>
-<p>-s: 指定用户登入后所使用的shell。默认值为&#x2F;bin&#x2F;bash</p>
+                <h1 id="Ubuntu-安装-Docker-Engine"><a href="#Ubuntu-安装-Docker-Engine" class="headerlink" title="Ubuntu 安装 Docker Engine"></a>Ubuntu 安装 Docker Engine</h1><blockquote>
+<p>以Ubuntu 20.04为例</p>
+<p><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu | Docker Docs</a></p>
 </blockquote>
-<p>现在可以用新用户登录系统验证是否可用。</p>
-<h3 id="分配权限"><a href="#分配权限" class="headerlink" title="分配权限"></a>分配权限</h3><p>给创建的新用户分配sudo的权限。</p>
-<blockquote>
-<p>sudo允许一个已授权用户以超级用户或者其它用户的角色运行一个命令</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># adduser jackpoi sudo</span><br>Adding user jackpoi to group sudo ...<br>Adding user jackpoi to group sudo<br>Done.<br></code></pre></td></tr></table></figure>
+<h2 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h2><p>要卸载的非官方软件包有<code>docker.io</code>，<code>docker-compose</code>，<code>docker-compose-v2</code>，<code>docker-doc</code>，<code>podman-docker</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> pkg <span class="hljs-keyword">in</span> docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; <span class="hljs-keyword">do</span> sudo apt-get remove <span class="hljs-variable">$pkg</span>; <span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
 
-<p>现在用新用户可以执行sudo命令，但是需要输入用户密码。</p>
-<h3 id="设置sudo免密码"><a href="#设置sudo免密码" class="headerlink" title="设置sudo免密码"></a>设置sudo免密码</h3><p>root权限的用户执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># visudo</span><br></code></pre></td></tr></table></figure>
+<h2 id="通过-apt-进行安装"><a href="#通过-apt-进行安装" class="headerlink" title="通过 apt 进行安装"></a>通过 apt 进行安装</h2><p>由于 apt 源使用 HTTPS 以确保软件下载过程中不被篡改。因此，我们首先需要添加使用 HTTPS 传输的软件包以及 CA 证书。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 为了确认所下载软件包的合法性，需要添加软件源的GPG密钥</span><br>sudo apt-get update<br>sudo apt-get install ca-certificates curl gnupg<br>sudo install -m 0755 -d /etc/apt/keyrings<br>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg<br>sudo <span class="hljs-built_in">chmod</span> a+r /etc/apt/keyrings/docker.gpg<br></code></pre></td></tr></table></figure>
 
-<p>或者</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># vi /etc/sudoers</span><br></code></pre></td></tr></table></figure>
+<p>添加docker的软件源，并不是docker hub的源，而是docker这个软件的源。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 将官方源添加到apt仓库</span><br><span class="hljs-built_in">echo</span> \<br>  <span class="hljs-string">&quot;deb [arch=&quot;</span>$(dpkg --print-architecture)<span class="hljs-string">&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \</span><br><span class="hljs-string">  &quot;</span>$(. /etc/os-release &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$VERSION_CODENAME</span>&quot;</span>)<span class="hljs-string">&quot; stable&quot;</span> | \<br>  sudo <span class="hljs-built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null<br></code></pre></td></tr></table></figure>
 
-<p>在文件的最下方添加以下内容，如果添加到前面可能会收到其他组用户的影响。</p>
-<figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nsis"><span class="hljs-comment"># 设置用户</span><br>jackpoi <span class="hljs-literal">ALL</span>=(<span class="hljs-literal">ALL</span>:<span class="hljs-literal">ALL</span>) NOPASSWD:<span class="hljs-literal">ALL</span><br><span class="hljs-comment"># 设置 %用户组</span><br>%jackpoi <span class="hljs-literal">ALL</span>=(<span class="hljs-literal">ALL</span>:<span class="hljs-literal">ALL</span>) NOPASSWD:<span class="hljs-literal">ALL</span><br></code></pre></td></tr></table></figure>
+<p>国内服务器由于网络问题，下载的会很慢，推荐使用[清华源](<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/">docker-ce | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a>)进行安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> \<br>  <span class="hljs-string">&quot;deb [arch=<span class="hljs-subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \</span><br><span class="hljs-string">  &quot;</span>$(. /etc/os-release &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$VERSION_CODENAME</span>&quot;</span>)<span class="hljs-string">&quot; stable&quot;</span> | \<br>  sudo <span class="hljs-built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null<br></code></pre></td></tr></table></figure>
 
-<h2 id="禁止root用户ssh登录"><a href="#禁止root用户ssh登录" class="headerlink" title="禁止root用户ssh登录"></a>禁止root用户ssh登录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># vim /etc/ssh/sshd_config</span><br></code></pre></td></tr></table></figure>
+<p>使用apt安装docker相关软件的最新版：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get update<br>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<br></code></pre></td></tr></table></figure>
 
-<p>将<code>PermitRootLogin yes</code>修改为<code>PermitRootLogin no</code>，保存之后重启ssh服务<code>service ssh restart</code>。</p>
-<h2 id="修改ssh登录端口"><a href="#修改ssh登录端口" class="headerlink" title="修改ssh登录端口"></a>修改ssh登录端口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@Ubuntu:~]<span class="hljs-comment"># vim /etc/ssh/sshd_config</span><br></code></pre></td></tr></table></figure>
+<p>查看docker版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker --version<br></code></pre></td></tr></table></figure>
 
-<p>将<code>Port 22</code>修改为任意<code>1025~65535</code>直接的端口，保存之后重启ssh服务<code>service ssh restart</code>。</p>
+<h2 id="设置-docker-镜像"><a href="#设置-docker-镜像" class="headerlink" title="设置 docker 镜像"></a>设置 docker 镜像</h2><p>首先执行以下命令，查看是否在 <code>docker.service</code> 文件中配置过镜像地址。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl <span class="hljs-built_in">cat</span> docker | grep <span class="hljs-string">&#x27;\-\-registry\-mirror&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>如果该命令有输出，那么执行 <code>$ systemctl cat docker</code> 查看 <code>ExecStart=</code> 出现的位置，修改对应的文件内容去掉 <code>--registry-mirror</code> 参数及其值，并按接下来的步骤进行配置。</p>
+<p>如果以上命令没有任何输出，那么就可以在 <code>/etc/docker/daemon.json</code> 中写入如下内容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;registry-mirrors&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-string">&quot;https://hub-mirror.c.163.com&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;https://mirror.baidubce.com&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>上面是网易和百度开放的docker hub镜像，阿里云的服务器会提供一个私有的镜像地址：<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances">阿里云镜像源(点击管理控制台 -&gt; 左侧镜像工具 -&gt; 镜像加速器 -&gt; 复制加速器地址)</a>。</p>
+<p>之后重新启动服务。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure>
+
+<h2 id="docker-常用命令"><a href="#docker-常用命令" class="headerlink" title="docker 常用命令"></a>docker 常用命令</h2><p>[Docker 常用命令 - 云·烟 (jackpoi.github.io)](<a href="https://jackpoi.github.io/2022/04/21/Docker">https://jackpoi.github.io/2022/04/21/Docker</a> 常用命令&#x2F;)</p>
 
                 
               </div>
@@ -319,6 +325,8 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/docker/" class="print-no-link">#docker</a>
+      
         <a href="/tags/ubuntu/" class="print-no-link">#ubuntu</a>
       
     </div>
@@ -331,8 +339,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Ubuntu 登录设置</div>
-      <div>https://jackpoi.github.io/2023/11/12/Ubuntu 登录设置/</div>
+      <div>Ubuntu 安装 Docker Engine</div>
+      <div>https://jackpoi.github.io/2023/11/13/Ubuntu-安装-Docker-Engine/</div>
     </div>
     <div class="license-meta">
       
@@ -344,7 +352,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月12日</div>
+          <div>2023年11月13日</div>
         </div>
       
       
@@ -376,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/13/Ubuntu-%E5%AE%89%E8%A3%85-Docker-Engine/" title="Ubuntu 安装 Docker Engine">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Ubuntu 安装 Docker Engine</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/13/yunzai-bot%20%E9%83%A8%E7%BD%B2/" title="yunzai-bot 部署">
-                        <span class="hidden-mobile">yunzai-bot 部署</span>
+                      <a href="/2023/11/12/Ubuntu%20%E7%99%BB%E5%BD%95%E8%AE%BE%E7%BD%AE/" title="Ubuntu 登录设置">
+                        <span class="hidden-mobile">Ubuntu 登录设置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
