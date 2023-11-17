@@ -4,6 +4,46 @@
   
   
   <entry>
+    <title>Crack Sublime Text</title>
+    <link href="/2023/11/17/Crack-Sublime-Text/"/>
+    <url>/2023/11/17/Crack-Sublime-Text/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Crack-Sublime-Text"><a href="#Crack-Sublime-Text" class="headerlink" title="Crack Sublime Text"></a>Crack Sublime Text</h1><h2 id="Crack"><a href="#Crack" class="headerlink" title="Crack"></a>Crack</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ol><li>下载 Sublime Text，安装版、便携版都可以。</li><li>安装之后打开安装目录，找到 sublime_text.exe 文件，Mac 和 Linux 找到对应的 sublime_text 文件。</li><li>打开<a href="https://hexed.it/">HexEd.it</a>网站，将上面的文件打开。</li></ol><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><ol><li>打开文件后搜索 <code>80 78 05 00 0F 94 C1</code>，并找到所在位置。</li><li>将 <code>C6 40 05 01 48 85 C9</code> 作为十六进制覆盖掉上面的内容。</li><li>保存文件，并覆盖掉原来的 sublime_text 文件。</li><li>完成。</li></ol><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><ol><li><p>打开文件后搜索 <code>41 57 41 56 56 57 55 53 B8 28 21 00 00</code>，并找到所在位置。</p></li><li><p>将 <code>33 C0 FE C0 C3 57 55 53 B8 28 21 00 00</code> 作为十六进制覆盖掉上面的内容。</p></li><li><p>搜索 <code>6C 69 63 65 6E 73 65 2E 73 75 62 6C 69 6D 65 68 71 2E 63 6F 6D</code>，并找到所在位置。</p></li><li><p>将 <code>73 75 62 6C 69 6D 65 68 71 2E 6C 6F 63 61 6C 68 6F 73 74 00 00</code> 作为十六进制覆盖掉上面的内容。</p></li><li><p>保存文件，并覆盖掉原来的 sublime_text 文件。</p></li><li><p>启动软件，并填入以下 License：</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs maxima">可自定义用户名<br>Unlimited User License<br>EA7E-<span class="hljs-number">81044230</span><br><span class="hljs-number">0C0CD4A8</span> CAA317D9 CCABD1AC 434C984C<br>7E4A0B13 77893C3E DD0A5BA1 B2EB721C<br>4BAAB4C4 9B96437D 14EB743E 7DB55D9C<br>7CA26EE2 67C3B4EC 29B2C65A 88D90C59<br>CB6CCBA5 7DE6177B C02C2826 8C9A21B0<br>6AB1A5B6 20B09EA2 <span class="hljs-number">01C979BD</span> <span class="hljs-number">29670B19</span><br>92DC6D90 <span class="hljs-number">6E365849</span> 4AB84739 5B4C3EA1<br><span class="hljs-number">048CC1D0</span> 9748ED54 CAC9D585 90CAD815<br></code></pre></td></tr></table></figure></li><li><p>完成。</p></li></ol><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><ol><li><p>修改配置文件及插件路径路径</p><blockquote><p>在安装目录下新建 <code>Data</code> 文件夹，之后重启软件</p></blockquote></li><li><p>安装插件</p><blockquote><ol><li>按下 <code>Ctrl+Shift+P</code> 快捷键，找到 <code>Install Package Control</code> 选项，安装插件管理工具</li><li>安装成功后，再次按下 <code>Ctrl+Shift+P</code> 快捷键，找到 <code>Install Package</code> 选项，输入需要安装的插件，回车安装</li></ol></blockquote></li><li><p>常用插件</p><p><a href="https://packagecontrol.io/">Sublime Text 插件仓库地址</a></p><ul><li>LocalizedMenu - 本地化菜单，包含多种语言</li><li>Pretty JSON - JSON 格式化工具</li><li>Solarized Color Scheme - Solarized 主题</li></ul></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>crack</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Docker 部署 alist</title>
+    <link href="/2023/11/13/Docker-%E9%83%A8%E7%BD%B2-alist/"/>
+    <url>/2023/11/13/Docker-%E9%83%A8%E7%BD%B2-alist/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Docker-部署-alist"><a href="#Docker-部署-alist" class="headerlink" title="Docker 部署 alist"></a>Docker 部署 alist</h1><blockquote><p><a href="https://alist.nn.ci/zh/guide/install/docker.html">https://alist.nn.ci/zh/guide/install/docker.html</a></p></blockquote><ol><li><p>新建 docker-compose.yml 文件</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">&#x27;3.28&#x27;</span><br><span class="hljs-attr">services:</span><br>    <span class="hljs-attr">alist:</span><br>        <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br>        <span class="hljs-attr">volumes:</span><br>        <span class="hljs-comment"># 配置文件映射</span><br>            <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;/etc/alist/data:/opt/alist/data&#x27;</span><br>            <span class="hljs-comment"># 本地存储映射</span><br>            <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;/etc/alist/storage:/opt/alist/storage&#x27;</span><br>        <span class="hljs-attr">ports:</span><br>            <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;5244:5244&#x27;</span><br>        <span class="hljs-attr">environment:</span><br>            <span class="hljs-bullet">-</span> <span class="hljs-string">PUID=0</span><br>            <span class="hljs-bullet">-</span> <span class="hljs-string">PGID=0</span><br>            <span class="hljs-bullet">-</span> <span class="hljs-string">UMASK=022</span><br>        <span class="hljs-attr">container_name:</span> <span class="hljs-string">alist</span><br>        <span class="hljs-attr">image:</span> <span class="hljs-string">&#x27;xhofe/alist:latest&#x27;</span><br></code></pre></td></tr></table></figure><p>其中<code>本地存储映射</code>是由于docker搭建的alist的本机存储选项是按docker的环境配置的，将其映射到本机文件夹，就可以在docker中配置本机存储，并映射到宿主机中。</p></li><li><p>启动 docker</p><p>在 docker-compose.yml 目录下运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo docker compose up -d<br></code></pre></td></tr></table></figure></li><li><p>设置管理员密码</p><p>3.25.0 以上版本将密码改成加密方式存储的hash值，无法直接反算出密码，如果忘记了密码只能通过重新 <strong><code>随机生成</code></strong> 或者 <strong><code>手动设置</code></strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 随机生成一个密码</span><br>sudo docker <span class="hljs-built_in">exec</span> -it alist ./alist admin random<br><span class="hljs-comment"># 手动设置一个密码,`NEW_PASSWORD`是指你需要设置的密码</span><br>sudo docker <span class="hljs-built_in">exec</span> -it alist ./alist admin <span class="hljs-built_in">set</span> NEW_PASSWORD<br></code></pre></td></tr></table></figure></li><li><p>查看 alist 版本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo docker <span class="hljs-built_in">exec</span> -it alist ./alist version<br></code></pre></td></tr></table></figure></li><li><p>添加本机存储</p><p>配置本机存储时，要将<code>根文件夹路径</code>设置为 docker-compose.yml 映射的目录：<code>/opt/alist/storage</code>。</p></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>docker</tag>
+      
+      <tag>alist</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ubuntu 安装 Docker Engine</title>
     <link href="/2023/11/13/Ubuntu-%E5%AE%89%E8%A3%85-Docker-Engine/"/>
     <url>/2023/11/13/Ubuntu-%E5%AE%89%E8%A3%85-Docker-Engine/</url>
