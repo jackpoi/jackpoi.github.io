@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Creak DBeaver 24.0</title>
+    <link href="/2024/05/30/Creak-DBeaver-24.0/"/>
+    <url>/2024/05/30/Creak-DBeaver-24.0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Creak-DBeaver-24-0"><a href="#Creak-DBeaver-24-0" class="headerlink" title="Creak DBeaver 24.0"></a>Creak DBeaver 24.0</h1><ol><li><p>替换 jre</p><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-literal">-</span>vm<br><span class="hljs-attribute">D</span>:\develop\jdk\jdk-17\bin\java<br></code></pre></td></tr></table></figure></li><li><p>配置 ja-netfilter</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">-Dlm<span class="hljs-selector-class">.debug</span>.mode=true<br><span class="hljs-attr">--add-opens</span>=java.base/jdk<span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.org</span><span class="hljs-selector-class">.objectweb</span>.asm=ALL-UNNAMED<br><span class="hljs-attr">--add-opens</span>=java.base/jdk<span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.org</span><span class="hljs-selector-class">.objectweb</span><span class="hljs-selector-class">.asm</span>.tree=ALL-UNNAMED<br>-javaagent:D:\develop\IDE\jetbra\ja-netfilter.jar=jetbrains<br></code></pre></td></tr></table></figure></li><li><p>配置 power.conf</p><p>[Args] 下添加</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">EQUAL</span>,<span class="hljs-number">65537</span>,<span class="hljs-number">18647337145970099840985713466364918234362046859276071603267794715593136936160492846272521898537004122925301027678489984501477994730537725810211014632147698623617755644615810363782781403177803009057237675193508609212761456687315887698721555027495273857704703161501556278932648428860647172378607605329884151219327938607350280135400521619196335682733371571813479415591793504469016713220060778679994845066654727814845227443267965199130452466305398985400201871520156163836666885179554470299593371783155887571488588786209640709589687137547072170350760576933982430617266249638449664790360846298962977961246175829506878817169</span>-&gt;<span class="hljs-number">65537</span>,<span class="hljs-number">26568176594452198874357955233081865355601482575454463708433306578459030820569735111660768507557691552912716777149966830516251509872885609614711295305581089270555091503264286693743745315059054820199160842222042189849689922692298273645936389982899317988537289718057741782081574951312275856190235441646123049577974991407616013276510427782805925379988038959945798382561302135542700860204474353714516664853954768210723310513114678397057324482615339456351078381638951155512135128405408033884232379809701908270283694138677289134377234340940696655420259553525375619972769383153649791856349266450908175059345382153220830798463</span><br></code></pre></td></tr></table></figure></li><li><p>配置 dns.conf</p><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-string">[DNS]</span><br>EQUAL,dbeaver.com<br></code></pre></td></tr></table></figure></li><li><p>激活码</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Dm3qISOS</span>+h8eu4kliBh+K6WXzIxIx03rKg6F/NxE7WqCw9HVN0/uxpGFvi8+EI2/ZGu/eDOQbirU<br><span class="hljs-attribute">Y8dk2NTCekvzKldoJgPPSKFsvUUFCUp6iVtgtTeD4ddvJS6HQzXM9R</span>+P8dR0f4v38yUGuTsU8PCv<br><span class="hljs-attribute">RXfoQTXtSxkdYF4v</span>/<span class="hljs-number">8</span>bEELPf4qmnYgs7HWbcvq2YYVK2dokYxaV4F0X5oM5Tv1BsHlPqI8Dh8OHm<br><span class="hljs-attribute">Nj8FkYZ1zErqZ</span>+<span class="hljs-number">2</span>zFh3b+m6XE9IHOxf3X+<span class="hljs-number">5</span>HEF+<span class="hljs-number">0</span>esq1J1NtyRGuoA2dIPkIoOX1zXaZkKgxFKrc<br><span class="hljs-attribute">L5xn</span>/kcqnqPiBJMg7y7AIYV9+DgE76Vv+m1PYQ==<br></code></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>crack</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Crack Sublime Text</title>
     <link href="/2023/11/17/Crack-Sublime-Text/"/>
     <url>/2023/11/17/Crack-Sublime-Text/</url>

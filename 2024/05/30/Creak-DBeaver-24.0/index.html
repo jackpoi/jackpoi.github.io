@@ -16,22 +16,22 @@
   <meta name="author" content="jackpoi">
   <meta name="keywords" content="Java,Golang,Game">
   
-    <meta name="description" content="byte[] 转换 int1byte 是 8bit，1int 是 4byte、32bit，在 byte[] 中取出 int 类型，需要取第一个 byte 以及向后顺延 3byte，一共 32bit，再转化成 int 类型。 Java 对 char，byte 或者 short 进行移位处理时，会先自动转换成 int 类型，也就是会在 char，byte 或者 short 的前面补上  0，直到达到">
+    <meta name="description" content="Creak DBeaver 24.0 替换 jre 12-vmD:\develop\jdk\jdk-17\bin\java  配置 ja-netfilter 1234-Dlm.debug.mode&#x3D;true--add-opens&#x3D;java.base&#x2F;jdk.internal.org.objectweb.asm&#x3D;ALL-UNNAMED--add-opens&#x3D;java.base&#x2F;jdk.interna">
 <meta property="og:type" content="article">
-<meta property="og:title" content="byte[] 转换 int">
-<meta property="og:url" content="https://jackpoi.github.io/2022/04/28/byte[]%20%E8%BD%AC%E6%8D%A2%20int/index.html">
+<meta property="og:title" content="Creak DBeaver 24.0">
+<meta property="og:url" content="https://jackpoi.github.io/2024/05/30/Creak-DBeaver-24.0/index.html">
 <meta property="og:site_name" content="云·烟">
-<meta property="og:description" content="byte[] 转换 int1byte 是 8bit，1int 是 4byte、32bit，在 byte[] 中取出 int 类型，需要取第一个 byte 以及向后顺延 3byte，一共 32bit，再转化成 int 类型。 Java 对 char，byte 或者 short 进行移位处理时，会先自动转换成 int 类型，也就是会在 char，byte 或者 short 的前面补上  0，直到达到">
+<meta property="og:description" content="Creak DBeaver 24.0 替换 jre 12-vmD:\develop\jdk\jdk-17\bin\java  配置 ja-netfilter 1234-Dlm.debug.mode&#x3D;true--add-opens&#x3D;java.base&#x2F;jdk.internal.org.objectweb.asm&#x3D;ALL-UNNAMED--add-opens&#x3D;java.base&#x2F;jdk.interna">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-28T19:26:05.000Z">
+<meta property="article:published_time" content="2024-05-30T20:23:09.000Z">
 <meta property="article:modified_time" content="2024-05-30T12:24:54.539Z">
 <meta property="article:author" content="jackpoi">
-<meta property="article:tag" content="java">
+<meta property="article:tag" content="crack">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>byte[] 转换 int - 云·烟</title>
+  <title>Creak DBeaver 24.0 - 云·烟</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="byte[] 转换 int"></span>
+            <span id="subtitle" data-typed-text="Creak DBeaver 24.0"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-28 19:26" pubdate>
-          2022年4月28日 晚上
+        <time datetime="2024-05-30 20:23" pubdate>
+          2024年5月30日 晚上
         </time>
       </span>
     
@@ -252,17 +252,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">byte[] 转换 int</h1>
+            <h1 id="seo-header">Creak DBeaver 24.0</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="byte-转换-int"><a href="#byte-转换-int" class="headerlink" title="byte[] 转换 int"></a>byte[] 转换 int</h3><p>1byte 是 8bit，1int 是 4byte、32bit，在 byte[] 中取出 int 类型，需要取第一个 byte 以及向后顺延 3byte，一共 32bit，再转化成 int 类型。</p>
-<p>Java 对 char，byte 或者 short 进行移位处理时，会先自动转换成 int 类型，也就是会在 char，byte 或者 short 的前面补上  0，直到达到 32bit。</p>
-<p>如 <code>byte[]&#123;1,2,3,4&#125;</code> 的二进制就是 <code>[00000001,00000010,00000011,00000100]</code>，其中索引 0 处的 int 整数就是 <code>00000001 00000010 00000011 00000100</code>，也就是 <code>16909060</code>。</p>
-<p>要将 byte[] 转换成 int，需要对其进行移位，byte[0] 左移 24 位，使其成为 32bit int 的第 0~7bit，同理，byte[1]、byte[2]、byte[3] 分别成为 int 的第 8-15bit、16-23bit、24-31bit。</p>
-<p><code>&amp; 0xFF</code>是为了得到低 8 位。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getInt</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span> &#123;<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">first</span> <span class="hljs-operator">=</span> source[index];<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">second</span> <span class="hljs-operator">=</span> source[index + <span class="hljs-number">1</span>];<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">third</span> <span class="hljs-operator">=</span> source[index + <span class="hljs-number">2</span>];<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">forth</span> <span class="hljs-operator">=</span> source[index + <span class="hljs-number">3</span>];<br>    <span class="hljs-keyword">return</span> (first &amp; <span class="hljs-number">0xFF</span>) &lt;&lt; <span class="hljs-number">24</span><br>        | (second &amp; <span class="hljs-number">0xFF</span>) &lt;&lt; <span class="hljs-number">16</span><br>        | (third &amp; <span class="hljs-number">0xFF</span>) &lt;&lt; <span class="hljs-number">8</span><br>        | (forth &amp; <span class="hljs-number">0xFF</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="Creak-DBeaver-24-0"><a href="#Creak-DBeaver-24-0" class="headerlink" title="Creak DBeaver 24.0"></a>Creak DBeaver 24.0</h1><ol>
+<li><p>替换 jre</p>
+<figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-literal">-</span>vm<br><span class="hljs-attribute">D</span>:\develop\jdk\jdk-17\bin\java<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>配置 ja-netfilter</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">-Dlm<span class="hljs-selector-class">.debug</span>.mode=true<br><span class="hljs-attr">--add-opens</span>=java.base/jdk<span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.org</span><span class="hljs-selector-class">.objectweb</span>.asm=ALL-UNNAMED<br><span class="hljs-attr">--add-opens</span>=java.base/jdk<span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.org</span><span class="hljs-selector-class">.objectweb</span><span class="hljs-selector-class">.asm</span>.tree=ALL-UNNAMED<br>-javaagent:D:\develop\IDE\jetbra\ja-netfilter.jar=jetbrains<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>配置 power.conf</p>
+<p>[Args] 下添加</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">EQUAL</span>,<span class="hljs-number">65537</span>,<span class="hljs-number">18647337145970099840985713466364918234362046859276071603267794715593136936160492846272521898537004122925301027678489984501477994730537725810211014632147698623617755644615810363782781403177803009057237675193508609212761456687315887698721555027495273857704703161501556278932648428860647172378607605329884151219327938607350280135400521619196335682733371571813479415591793504469016713220060778679994845066654727814845227443267965199130452466305398985400201871520156163836666885179554470299593371783155887571488588786209640709589687137547072170350760576933982430617266249638449664790360846298962977961246175829506878817169</span>-&gt;<span class="hljs-number">65537</span>,<span class="hljs-number">26568176594452198874357955233081865355601482575454463708433306578459030820569735111660768507557691552912716777149966830516251509872885609614711295305581089270555091503264286693743745315059054820199160842222042189849689922692298273645936389982899317988537289718057741782081574951312275856190235441646123049577974991407616013276510427782805925379988038959945798382561302135542700860204474353714516664853954768210723310513114678397057324482615339456351078381638951155512135128405408033884232379809701908270283694138677289134377234340940696655420259553525375619972769383153649791856349266450908175059345382153220830798463</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>配置 dns.conf</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-string">[DNS]</span><br>EQUAL,dbeaver.com<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>激活码</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Dm3qISOS</span>+h8eu4kliBh+K6WXzIxIx03rKg6F/NxE7WqCw9HVN0/uxpGFvi8+EI2/ZGu/eDOQbirU<br><span class="hljs-attribute">Y8dk2NTCekvzKldoJgPPSKFsvUUFCUp6iVtgtTeD4ddvJS6HQzXM9R</span>+P8dR0f4v38yUGuTsU8PCv<br><span class="hljs-attribute">RXfoQTXtSxkdYF4v</span>/<span class="hljs-number">8</span>bEELPf4qmnYgs7HWbcvq2YYVK2dokYxaV4F0X5oM5Tv1BsHlPqI8Dh8OHm<br><span class="hljs-attribute">Nj8FkYZ1zErqZ</span>+<span class="hljs-number">2</span>zFh3b+m6XE9IHOxf3X+<span class="hljs-number">5</span>HEF+<span class="hljs-number">0</span>esq1J1NtyRGuoA2dIPkIoOX1zXaZkKgxFKrc<br><span class="hljs-attribute">L5xn</span>/kcqnqPiBJMg7y7AIYV9+DgE76Vv+m1PYQ==<br></code></pre></td></tr></table></figure></li>
+</ol>
 
                 
               </div>
@@ -271,32 +282,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/java/" class="category-chain-item">java</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/java/" class="print-no-link">#java</a>
+        <a href="/tags/crack/" class="print-no-link">#crack</a>
       
     </div>
   
@@ -308,8 +298,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>byte[] 转换 int</div>
-      <div>https://jackpoi.github.io/2022/04/28/byte[] 转换 int/</div>
+      <div>Creak DBeaver 24.0</div>
+      <div>https://jackpoi.github.io/2024/05/30/Creak-DBeaver-24.0/</div>
     </div>
     <div class="license-meta">
       
@@ -321,7 +311,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月28日</div>
+          <div>2024年5月30日</div>
         </div>
       
       
@@ -353,18 +343,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/17/SSH%20%E8%87%AA%E5%8A%A8%E6%96%AD%E5%BC%80%E8%BF%9E%E6%8E%A5/" title="SSH 自动断开连接">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SSH 自动断开连接</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/26/Docker%20%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" title="Docker 解锁网易云音乐">
-                        <span class="hidden-mobile">Docker 解锁网易云音乐</span>
+                      <a href="/2023/11/17/Crack-Sublime-Text/" title="Crack Sublime Text">
+                        <span class="hidden-mobile">Crack Sublime Text</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
